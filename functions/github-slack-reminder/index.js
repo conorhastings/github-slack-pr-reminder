@@ -14,8 +14,8 @@ function sendSlackNotifcation(e, ctx, cb) {
   });
 
   github.issues.getAll({filter: 'assigned', per_page: 100}, (err, res) => {
-    const colors = color.make_color({colors_returned: res.length});
-    if (!err) {
+    if (!err && Array.isArray(res) && res.length) {
+      const colors = color.make_color({colors_returned: res.length});
       const attachments = res.map((pr, i) => {
        return {
         fallback: pr.title,
