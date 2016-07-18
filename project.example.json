@@ -1,0 +1,13 @@
+{
+  "name": "github-slack-pr-reminder",
+  "description": "send slack reminder of prs assigned to you",
+  "memory": 128,
+  "timeout": 10,
+  "role": "role",
+  "environment": {
+  	"GITHUB_API_TOKEN": "YOUR_TOKEN",
+  	"SLACK_TOKEN": "YOUR_TOKEN",
+  	"SLACK_USER": "YOUR_USER_NAME",
+  	"SLACK_BOT_EMOJI": ":slack_emoji:"
+  }
+}
